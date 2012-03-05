@@ -1,0 +1,35 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+        
+	<table class="profile">
+		<tbody>
+		<tr>
+			<th>${message:username-label}</th>
+			<td>${user.username}</td>
+		</tr>
+		<tr>
+			<th>${message:firstname-label}</th>
+			<td>${user.firstname}</td>
+		</tr>
+		<tr>
+			<th>${message:lastname-label}</th>
+			<td>${user.lastname}</td>
+		</tr>	
+		</tbody>
+	</table>   
+	
+	<br />     
+
+    <t:beaneditform t:id="userEditForm" object="user" submitlabel="${message:save-submit}" exclude="username, firstname, lastname" add="passwordConfirmation" reorder="password, passwordConfirmation">
+		<t:parameter name="password">
+			<t:label for="password" />
+			<t:passwordfield t:id="password" value="passwordValue" validate="minlength=5,maxlength=15" />
+		</t:parameter>
+		<t:parameter name="passwordConfirmation">
+			<t:label for="passwordConfirmation" />
+			<t:passwordfield t:id="passwordConfirmation" value="passwordConfirmationValue" validate="minlength=5,maxlength=15" />
+		</t:parameter>		
+	</t:beaneditform>	
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" t:type="belegsystemlayout" >
+	<body>
+		<form t:type="form" t:id="deletables">
+			<table t:type="grid" t:source="courses" t:row="course" t:add="program,instructors,workload,delete" t:exclude="description, maxParticipants, maxInstructors" reorder="courseIdentifier, title, program" 
+				t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+				<p:titleCell>					
+					<t:pagelink page="course/detailview" context="course">${course.title}</t:pagelink>
+				</p:titleCell>				
+				<p:programCell>
+					${course.program}
+				</p:programCell>
+				<p:instructorsCell>
+					<ul>
+						<t:loop source="course.instructors" value="loopinstructor">
+							<li>${loopinstructor}</li>
+						</t:loop>
+					</ul>
+				</p:instructorsCell>
+				<p:workloadCell>
+					${numbersOfWorkload}
+				</p:workloadCell>
+				<p:deleteCell>
+					<a t:type="actionlink" t:id="removeCourse" t:context="course" href="#">${message:debook-command}</a>
+				</p:deleteCell>
+			</table>
+		</form>
+	</body>
+</html>

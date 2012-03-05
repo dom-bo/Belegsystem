@@ -1,0 +1,22 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+
+	<form t:type="form">
+		<table t:type="grid" t:source="programs" t:row="program" t:add="edit,delete" 
+			t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+			<p:editCell>
+				<a t:type="pagelink" t:page="program/edit" t:context="program" href="#">${message:editcommand}</a>
+			</p:editCell>
+			<p:deleteCell>
+				<a t:type="actionlink" t:id="delete" t:page="program/edit" t:context="program" href="#">${message:deletecommand}</a>
+			</p:deleteCell>
+		</table><br />
+	</form><br/>
+
+	<t:pagelink page="program/edit">${message:createnewprogram}</t:pagelink>
+
+
+</html>

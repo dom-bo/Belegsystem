@@ -1,0 +1,68 @@
+<mockup version="1.0" skin="sketch" measuredW="1005" measuredH="112" mockupW="974" mockupH="70">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::ComboBox" x="43" y="74" w="164" h="-1" measuredW="138" measuredH="25" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Medieninformatik</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::ComboBox" x="239" y="73" w="67" h="-1" measuredW="41" measuredH="25" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>4</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::ComboBox" x="336" y="73" w="72" h="-1" measuredW="57" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Alle</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::ComboBox" x="440" y="74" w="153" h="-1" measuredW="57" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Alle</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="43" y="52" w="-1" h="-1" measuredW="64" measuredH="20" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>10</size>
+        <text>Studiengang</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="239" y="52" w="-1" h="-1" measuredW="52" measuredH="20" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>10</size>
+        <text>Semester</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="336" y="52" w="-1" h="-1" measuredW="23" measuredH="20" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>10</size>
+        <text>Zug</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="440" y="52" w="-1" h="-1" measuredW="52" measuredH="20" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>10</size>
+        <text>Lehrkraft</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::VRule" x="220" y="52" w="-1" h="52" measuredW="5" measuredH="100" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::VRule" x="321" y="52" w="-1" h="52" measuredW="5" measuredH="100" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::VRule" x="425" y="52" w="-1" h="52" measuredW="5" measuredH="100" zOrder="10" locked="false" isInGroup="-1"/>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Canvas" x="31" y="42" w="974" h="70" measuredW="100" measuredH="70" zOrder="11" locked="true" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="631" y="52" w="-1" h="-1" measuredW="39" measuredH="20" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>10</size>
+        <text>Suchen</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::VRule" x="616" y="52" w="-1" h="52" measuredW="5" measuredH="100" zOrder="13" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::SearchBox" x="632" y="73" w="166" h="-1" measuredW="65" measuredH="25" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>search</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

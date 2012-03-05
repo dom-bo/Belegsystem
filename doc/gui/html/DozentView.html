@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Dozenten Ansicht</title>
+		<!-- add your meta tags here -->
+		<script language="JavaScript" src="js/popup.js"></script>
+
+		<link href="css/my_layout.css" rel="stylesheet" type="text/css" />		
+		<!--[if lte IE 7]>
+<link href="css/patches/patch_my_layout.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+	</head>
+	<body>
+		<div class="page_margins">
+			<!-- start: skip link navigation -->
+			<!-- end: skip link navigation -->
+			<div class="page">
+                <img src="images/logo.gif" alt="Logo der Beuth-Hochschule" /><br/>
+				<div id="header">
+					<div id="topnav">
+						<!-- start: skip link navigation -->
+						<a class="skip" title="skip link" href="#navigation">Skip to
+							the navigation</a><span class="hideme">.</span>
+						<a class="skip" title="skip link" href="#content">Skip to the
+							content</a><span class="hideme">.</span> Angemeldet Dozent XY
+						<!-- end: skip link navigation -->
+						<a href="#">Abmelden</a>
+					</div>
+				</div>
+				<div id="nav">
+					<!-- skiplink anchor: navigation -->
+					<a id="navigation" name="navigation"></a>
+					<div class="hlist">
+						<!-- main navigation: horizontal list -->
+						<ul>
+							<li class="active">
+								<strong>Kurse</strong>
+							</li>
+							<li>
+								<a href="#">Nachrichten</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="main">
+				    <div id="dozent">
+						<table class="full">
+						    <thead>
+						       <tr>
+	                                <th>Kurs </th>
+	                                <th>Zug </th>
+	                                <th>Gruppe </th>
+	                                <th>Studienfach</th>
+	                                <th>Termin</th>
+	                                <th>Raum</th>
+	                                <th>Auslastung</th>
+	                            </tr>
+						    </thead>
+							<tbody>
+								<tr>
+									<th><a href="javascript:togglePopup('schuler_popup1', true)">Programmierung 1 (Schüler-Test!)</a></th>
+									<td>2</td>
+									<td>1</td>
+									<th>Technische Informatik </th>
+	                                <td>Mo 10:00</td>
+	                                <td>B 223</td>
+	                                <td class="ausgelastet">44 von 44</td>
+								</tr>
+	                            <tr>
+	                                <th><a href="javascript:togglePopup('dozent_popup1', true)">Programmierung 1</a></th>
+	                                <td>1</td>
+	                                <td>1</td>
+	                                <th>Medien Informatik</th>
+	                                <td>Di 10:00</td>
+	                                <td>B 321</td>
+	                                <td class="ausgelastet">44 von 44</td>
+	                            </tr>
+								<tr>
+	                                <th><a href="javascript:togglePopup('dozent_popup1', true)">Softwareprojekt 1</a></th>
+	                                <td>1</td>
+	                                <td>1</td>
+	                                <th>Medien Informatik</th>
+	                                <td>Mi 10:45</td>
+	                                <td>D 016</td>
+	                                <td>20 von 22</td>
+	                            </tr>
+	                            <tr>
+	                                <th><a href="javascript:togglePopup('dozent_popup1', true)">Programmierung I Übung</a></th>
+	                                <td>2</td>
+	                                <td>2</td>
+	                                <th>Medien Informatik</th>
+	                                <td>Do 14:15</td>
+	                                <td>D 016</td>
+	                                <td>5 von 22</td>
+	                            </tr>
+	                            <tr>
+	                                <th><a href="javascript:togglePopup('dozent_popup1', true)">Programmierung 1</a></th>
+	                                <td>2</td>
+	                                <td>1</td>
+	                                <th>Technische Informatik </th>
+	                                <td>Mo 10:00</td>
+	                                <td>B 223</td>
+	                                <td class="ausgelastet">44 von 44</td>
+	                            </tr>
+	                            <tr>
+	                                <th><a href="javascript:togglePopup('dozent_popup1', true)">Programmierung 1</a></th>
+	                                <td>1</td>
+	                                <td>1</td>
+	                                <th>Medien Informatik</th>
+	                                <td>Di 10:00</td>
+	                                <td>B 321</td>
+	                                <td class="ausgelastet">44 von 44</td>
+	                            </tr>
+	                            <tr>
+	                                <th><a href="javascript:togglePopup('dozent_popup1', true)">Softwareprojekt 1</a></th>
+	                                <td>1</td>
+	                                <td>1</td>
+	                                <th>Medien Informatik</th>
+	                                <td>Mi 10:45</td>
+	                                <td>D 016</td>
+	                                <td>20 von 22</td>
+	                            </tr>
+	                            <tr>
+	                                <th><a href="javascript:togglePopup('dozent_popup1', true)">Programmierung I Übung</a></th>
+	                                <td>2</td>
+	                                <td>2</td>
+	                                <th>Medien Informatik</th>
+	                                <td>Do 14:15</td>
+	                                <td>D 016</td>
+	                                <td>5 von 22</td>
+	                            </tr>
+	       					</tbody>
+						</table>
+						<button class="right">Als PDF</button>
+						<table class="stundenplan">
+							<caption>
+								Stundenplan
+							</caption>
+							<thead>
+							  <tr>
+							      <td>&nbsp;</td>
+							      <th>Montag</th>
+							      <th>Dienstag</th>
+							      <th>Mittwoch</th>
+							      <th>Donnerstag</th>
+							      <th>Freitag</th>
+							      <th>Samstag</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+							      <th class="time">08:00 Uhr</th>  
+							      <td>&nbsp;</td>
+							      <td>
+							          <div class="block pause30">
+							              <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">PRG &Uuml;</a></div>
+							              <div class="raum">D 016</div>
+							          </div>
+							      </td>
+	                              <td>&nbsp;</td>
+	                              <td>	                               
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">SE 2</a></div>
+	                                      <div class="raum">C 14</div>
+	                                  </div>	                                  
+	                              </td>
+	                              <td> 
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">ITPM</a></div>
+	                                      <div class="raum">B 224</div>
+	                                  </div>
+	                               </td>
+	                              <td>&nbsp;</td>
+	                          </tr>
+							  <tr>
+	                              <th class="time">10:00 Uhr</th>     
+	                              <td>&nbsp;</td>
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">SWE 2</a></div>
+	                                      <div class="raum">B 333</div>
+	                                  </div>
+	                              </td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">ITPM</a></div>
+	                                      <div class="raum">B 224</div>
+	                                  </div>
+	                              </td>
+	                              <td>&nbsp;</td>
+	                          </tr>
+	                          <tr>
+	                              <th class="time">12:15 Uhr</th>     
+	                              <td>&nbsp;</td>
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">SWE 2</a></div>
+	                                      <div class="raum">B 333</div>
+	                                  </div>
+	                              </td>
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">SWE PR 1</a></div>
+	                                      <div class="raum">D 13</div>
+	                                  </div>
+	                              </td>
+	                              <td>&nbsp;</td>
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">SE 2</a></div>
+	                                      <div class="raum">D 14</div>
+	                                  </div>
+	                              </td>
+	                              <td>&nbsp;</td>
+	                          </tr>
+	                          <tr>
+	                              <th class="time">14:15 Uhr</th>     
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">SWE PR 1</a></div>
+	                                      <div class="raum">D 13</div>
+	                                  </div>
+	                              </td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                          </tr>
+	                          <tr>
+	                              <th class="time">16:00 Uhr</th>     
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">MietRe</a></div>
+	                                      <div class="raum">B 101</div>
+	                                  </div>
+	                              </td>                              
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                          </tr>
+	                          <tr>
+	                              <th class="time">17:45 Uhr</th>     
+	                              <td>
+	                                  <div class="block pause30">
+	                                      <div class="fach"><a href="javascript:togglePopup('dozent_popup1', true)">MietRe</a></div>
+	                                      <div class="raum">B 101</div>
+	                                  </div>
+	                              </td>                              
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                          </tr>
+	                          <tr>
+	                              <th class="time">19:15 Uhr</th>     
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                              <td>&nbsp;</td>
+	                          </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- begin: #footer -->
+				<div id="footer">
+					Copyright SOURCE
+				</div>
+				
+				<!-- popup start -->
+				<div class="popup" id="dozent_popup1" style="visibility: hidden">
+					<table class="popup_table">
+						<!-- popup header -->
+						<tr>						
+						<td class="popup_header">
+							<table>
+							<tr>
+								<td class="title">Kursinformationen</td>
+								<td class="close"><a href="javascript:togglePopup('dozent_popup1', false)"><div class="side_button close_button"></div></a></td>
+							</tr>								
+							</table>
+						</td>
+						</tr>
+						<!-- popup content -->
+						<tr>
+						<td class="popup_title">		
+							<table>
+							<tr>
+								<td class="course">Softwareprojekt I</td>
+								<td class="allocation">Auslastung: 24/24</td>
+							</tr>								
+							</table>						
+						</td>
+						</tr>
+						
+						<tr>
+						<td class="popup_details">		
+							Studienfach: Medieninformatik | Raum: D016 | Mi 8:00 ; Mi 10: 40 ; Mi 12:15			
+						</td>
+						</tr>	
+						
+						<tr>
+						<td class="popup_select">		
+							<div id="nav">												
+									<a id="navigation" name="navigation"></a>
+									<div class="hlist">
+										<ul>
+											<li class="active">
+											<strong>Kurs bearbeiten</strong>
+											</li>
+											<li>
+											<a href="javascript:togglePopup('dozent_popup1', false);togglePopup('dozent_popup2', true);">Teilnehmer anzeigen</a>
+											</li>
+											<li>
+											<a href="#">Teilnehmer exportieren</a>
+											</li>											
+										</ul>									
+									</div>
+							</div>			
+						</td>
+						</tr>	
+						
+						<tr>
+						<td class="popup_description">	
+							<div class="box_title">Beschreibung:</div>
+							<table>
+							<tr>
+								<td style="width: 100%">								
+									<div class="description_content">
+										<textarea rows="5">Die Studierenden sollen in der Lage sein, eine Software-Anwendung als Projekt eigenständig zu Programmierungkonzipieren und umzusetzen, wobei alle im Software- Engineering behandelten Themen zur Anwendung kommen. Kenntnisse der verwendeten Modellierungs- und Programmiersprache (z.B. UML, Java) sollen vertieft und mit anderen Themen verknüpft werden, z.B. SW-Architekturen Programmierungfür verteilte Anwendungen im Cross-Media-Bereich.
+Die Teamfähigkeit und besonders auch die Kommunikations- und Präsentati- onstechniken sowie die Kompetenz der Konfliktlösung sowie der Risikoab- schätzung sollen vertieft werden. Dazu gehört auch die Anwendung des Pro- jekt- und Qualitätsmanagements. Wichtig ist dabei die</textarea>
+									</div>								
+								</td>	
+								<td style="vertical-align: top">
+									<div class="side_button save_button"></div>
+									<div class="side_button discard_button"></div>
+								</td>
+							</tr>
+							</table>		
+						</td>
+						</tr>
+						
+						
+						<tr>
+						<td class="popup_notes">		
+							<div class="box_title">Notizen:</div>
+							<div class="notes_content">
+								<table>
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 27.05.2011</strong><br />
+											Bitte beachten sie auch meine tollen Angebote
+											für Studenten auf meiner Website...<br/>
+											Dort können sie Klausuren aus dem Vorsemester für
+											nur 1EUR kaufen. 
+										</div>								
+									</td>	
+									<td style="vertical-align: top">
+										<div class="side_button edit_button"></div>
+										<div class="side_button discard_button"></div>
+									</td>
+								</tr>										
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 20.05.2011</strong><br />
+											Abgabe der Use-Case Diagramme.
+										</div>								
+									</td>	
+									<td style="vertical-align: top">
+										<div class="side_button edit_button"></div>
+										<div class="side_button discard_button"></div>
+									</td>
+								</tr>
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 19.05.2011</strong><br />
+											Liebe Studierenden, bitte belegen sie diesen Kurs 
+											nicht, ich hab keine Lust ihn zu unterrichten! Belegen
+											sie alternativ den Kochkurs, der macht auch Spaß ...
+										</div>								
+									</td>	
+									<td style="vertical-align: top">
+										<div class="side_button edit_button"></div>
+										<div class="side_button discard_button"></div>
+									</td>
+								</tr>									
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 13.05.2011</strong><br />
+											Abgabetermin der Zielbestimmung
+										</div>								
+									</td>	
+									<td style="vertical-align: top">
+										<div class="side_button edit_button"></div>
+										<div class="side_button discard_button"></div>
+									</td>
+								</tr>		
+								
+								</table>								
+							</div>		
+							<button class="right">Notiz hinzufügen</button>								
+						</td>
+						</tr>																	
+											
+					</table>
+				</div>	
+				<!-- popup ende -->	
+				
+				<!-- popup start -->
+				<div class="popup" id="dozent_popup2" style="visibility: hidden">
+					<table class="popup_table">
+						<!-- popup header -->
+						<tr>						
+						<td class="popup_header">
+							<table>
+							<tr>
+								<td class="title">Kursinformationen</td>
+								<td class="close"><a href="javascript:togglePopup('dozent_popup2', false)"><div class="side_button close_button"></div></a></td>
+							</tr>								
+							</table>
+						</td>
+						</tr>
+						<!-- popup content -->
+						<tr>
+						<td class="popup_title">		
+							<table>
+							<tr>
+								<td class="course">Softwareprojekt I</td>
+								<td class="allocation">Auslastung: 24/24</td>
+							</tr>								
+							</table>						
+						</td>
+						</tr>
+						
+						<tr>
+						<td class="popup_details">		
+							Studienfach: Medieninformatik | Raum: D016 | Mi 8:00 ; Mi 10: 40 ; Mi 12:15			
+						</td>
+						</tr>	
+						
+						<tr>
+						<td class="popup_select">		
+							<div id="nav">												
+									<a id="navigation" name="navigation"></a>
+									<div class="hlist">
+										<ul>
+											<li>
+											<a href="javascript:togglePopup('dozent_popup1', true);togglePopup('dozent_popup2', false);">Kurs bearbeiten</a>
+											</li>
+											<li class="active">
+											<strong>Teilnehmer anzeigen</strong>
+											</li>
+											<li>
+											<a href="#">Teilnehmer exportieren</a>
+											</li>											
+										</ul>									
+									</div>
+							</div>			
+						</td>
+						</tr>
+						
+						<tr>
+						<td class="popup_notes">		
+							<div class="box_title">Kursteilnehmer:</div>
+							<div class="notes_content">
+							<table class="usertable">
+							    <thead>
+							       <tr>
+		                                <th class="user_pos"># </th>
+		                                <th class="user_name">Name </th>
+		                                <th>Matrikel </th>
+		                                <th>Optionen</th>
+		                            </tr>
+							    </thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>
+									<tr class="highlight">
+										<td>2</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>
+									<tr class="highlight">
+										<td>4</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>
+									<tr class="highlight">
+										<td>6</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>
+									<tr class="highlight">
+										<td>8</td>
+										<td>Fabian Dannenberger</td>
+										<td>764349</td>
+										<td><div class="side_button mail_button"></div><div class="side_button discard_button"></div></td>
+									</tr>																		
+		       					</tbody>
+							</table>								
+							</div>		
+						</td>
+						</tr>																		
+											
+					</table>
+				</div>	
+				<!-- popup ende -->	
+				
+				
+				<!-- popup start FÜR SCHÜLER TODOTODOTODO!!!! -->
+				<div class="popup" id="schuler_popup1" style="visibility: hidden">
+					<table class="popup_table">
+						<!-- popup header -->
+						<tr>						
+						<td class="popup_header">
+							<table>
+							<tr>
+								<td class="title">Kursinformationen</td>
+								<td class="close"><a href="javascript:togglePopup('schuler_popup1', false)"><div class="side_button close_button"></div></a></td>
+							</tr>								
+							</table>
+						</td>
+						</tr>
+						<!-- popup content -->
+						<tr>
+						<td class="popup_title">		
+							<table>
+							<tr>
+								<td class="course">Softwareprojekt I</td>
+								<td class="allocation">Auslastung: 24/24</td>
+							</tr>								
+							</table>						
+						</td>
+						</tr>
+						
+						<tr>
+						<td class="popup_details">		
+							Dozent: <a href="#">Michael Steppat</a> | Raum: D016 | Mi 8:00 ; Mi 10: 40 ; Mi 12:15			
+						</td>
+						</tr>	
+						
+						
+						<tr>
+						<td class="popup_description">	
+							<div class="box_title">Beschreibung:</div>
+							<table>
+							<tr>
+								<td style="width: 100%">								
+									<div class="description_content">
+										<textarea rows="5">Die Studierenden sollen in der Lage sein, eine Software-Anwendung als Projekt eigenständig zu Programmierungkonzipieren und umzusetzen, wobei alle im Software- Engineering behandelten Themen zur Anwendung kommen. Kenntnisse der verwendeten Modellierungs- und Programmiersprache (z.B. UML, Java) sollen vertieft und mit anderen Themen verknüpft werden, z.B. SW-Architekturen Programmierungfür verteilte Anwendungen im Cross-Media-Bereich.
+Die Teamfähigkeit und besonders auch die Kommunikations- und Präsentati- onstechniken sowie die Kompetenz der Konfliktlösung sowie der Risikoab- schätzung sollen vertieft werden. Dazu gehört auch die Anwendung des Pro- jekt- und Qualitätsmanagements. Wichtig ist dabei die</textarea>
+									</div>								
+								</td>	
+								<td style="vertical-align: top">
+									<div>&nbsp;</div>
+								</td>
+							</tr>
+							</table>		
+						</td>
+						</tr>
+						
+						
+						<tr>
+						<td class="popup_notes">		
+							<div class="box_title">Notizen:</div>
+							<div class="notes_content">
+								<table>
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 27.05.2011</strong><br />
+											Bitte beachten sie auch meine tollen Angebote
+											für Studenten auf meiner Website...<br/>
+											Dort können sie Klausuren aus dem Vorsemester für
+											nur 1EUR kaufen. 
+										</div>								
+									</td>	
+								</tr>										
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 20.05.2011</strong><br />
+											Abgabe der Use-Case Diagramme.
+										</div>								
+									</td>	
+								</tr>
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 19.05.2011</strong><br />
+											Liebe Studierenden, bitte belegen sie diesen Kurs 
+											nicht, ich hab keine Lust ihn zu unterrichten! Belegen
+											sie alternativ den Kochkurs, der macht auch Spaß ...
+										</div>								
+									</td>	
+								</tr>									
+								<!-- Eintrag -->
+								<tr>
+									<td>								
+										<div class="notes_text">
+											<strong>Datum: 13.05.2011</strong><br />
+											Abgabetermin der Zielbestimmung
+										</div>								
+									</td>	
+								</tr>		
+								
+								</table>								
+							</div>		
+						</td>
+						</tr>																	
+											
+					</table>
+				</div>	
+				<!-- popup ende -->					
+				
+			</div>
+		</div>
+
+	</body>
+</html>
+

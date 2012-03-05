@@ -1,0 +1,32 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<form t:type="form">
+		<table t:type="grid" t:source="admins" t:row="admin" t:add="username,firstname,lastname,email,phone,adminPrograms,edit,delete" exclude="registered,rolename" 
+			t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+			<p:usernameCell>${admin.user.username}</p:usernameCell>
+			<p:firstnameCell>${admin.user.firstname}</p:firstnameCell>
+			<p:lastnameCell>${admin.user.lastname}</p:lastnameCell>
+			<p:emailCell>${admin.user.email}</p:emailCell>
+			<p:phoneCell>${admin.user.phone}</p:phoneCell>
+			<p:adminProgramsCell>
+				<t:loop source="admin.administeredPrograms" value="program">
+					${program.description}<br/>
+				</t:loop>
+			</p:adminProgramsCell>			
+			<p:editCell>
+				<a t:type="pagelink" t:page="admin/edit" t:context="admin" href="#">${message:editcommand}</a>
+			</p:editCell>
+			<p:deleteCell>
+				<a t:type="actionlink" t:id="delete" t:page="program/edit" t:context="admin" href="#">${message:deletecommand}</a>
+			</p:deleteCell>
+		</table><br />
+	</form><br/>	
+
+	<p>
+	    [<t:pagelink page="admin/edit">${message:createnewadmin}</t:pagelink>]
+	</p>
+
+</html>

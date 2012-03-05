@@ -1,0 +1,30 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+        
+    <t:beaneditform t:id="userEditForm" object="user" submitlabel="${submitLabelOfForm}" add="passwordConfirmation, participantRole, instructorRole, adminRole" reorder="username, password, passwordConfirmation">
+		<t:parameter name="password">
+			<t:label for="password" />
+			<t:passwordfield t:id="password" value="passwordValue" validate="minlength=5,maxlength=15" />
+		</t:parameter>
+		<t:parameter name="passwordConfirmation">
+			<t:label for="passwordConfirmation" />
+			<t:passwordfield t:id="passwordConfirmation" value="passwordConfirmationValue" validate="minlength=5,maxlength=15" />
+		</t:parameter>
+		<t:parameter name="participantRole">
+			<t:label for="participantRole"/>
+			<t:checkbox t:id="participantRole" style="margin-top: 5px;" t:mixins="Confirm" t:confirmCheckValue="participantRole" t:message="${message:reallyDeleteRole}"/>
+		</t:parameter>
+		<t:parameter name="instructorRole">
+			<t:label for="instructorRole"/>
+			<t:checkbox t:id="instructorRole" style="margin-top: 5px;" t:mixins="Confirm" t:confirmCheckValue="instructorRole" t:message="${message:reallyDeleteRole}"/>
+			<br/>
+		</t:parameter>
+		<t:parameter name="adminRole">
+			<t:label for="adminRole"/>			
+			<t:checkbox t:id="adminRole" style="margin-top: 5px;" t:mixins="Confirm" t:confirmCheckValue="adminRole" t:message="${message:reallyDeleteRole}"/>
+		</t:parameter>		
+	</t:beaneditform>
+
+</html>

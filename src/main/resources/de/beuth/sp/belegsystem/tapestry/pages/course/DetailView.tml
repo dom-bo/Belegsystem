@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" 
+	t:type="belegsystemlayout" >
+	<body>
+	    <table class="profile">
+			<tbody>
+			<tr>
+				<th>${message:courseIdentifier-label}</th>
+				<td>${course.courseIdentifier}</td>
+			</tr>
+			<tr>
+				<th>${message:title-label}</th>
+				<td>${course.title}</td>
+			</tr>
+			<tr>
+				<th>${message:description-label}</th>
+				<td>${course.description}</td>
+			</tr>	
+			<tr>
+				<th>${message:program-label}</th>
+				<td>${course.program}</td>
+			</tr>				
+			<tr>
+				<th>${message:term-label}</th>
+				<td>${course.term}</td>
+			</tr>	
+			<tr>
+				<th>${message:studygroup-label}</th>
+				<td>${course.studyGroup}</td>
+			</tr>	
+			<tr>
+				<th>${message:Instructors}</th>
+				<td>					
+					<ul>
+						<t:loop source="course.instructors" value="loopinstructor">
+							${loopinstructor}<br />
+						</t:loop>
+					</ul>
+				</td>
+			</tr>	
+			<tr>
+				<th>${message:lessons-label}</th>
+				<td>
+					<ul>
+						<t:loop source="course.lessons" value="lesson">
+							${lessonTimeSlot}<br />
+						</t:loop>
+					</ul>				
+				</td>
+			</tr>
+			<tr>
+				<th>${message:workload-label}</th>
+				<td>${workload}</td>
+			</tr>	
+			</tbody>
+		</table>
+	</body>
+</html>
+

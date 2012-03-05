@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" t:type="belegsystemlayout" >
+	<body>
+		<form t:type="form" t:id="coursetables">
+			<table t:type="grid" t:source="courses" t:row="course" t:add="program,participants,edit" reorder="courseIdentifier, description, program" 
+				t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+				<p:programCell>
+					${course.program}
+				</p:programCell>				
+				<p:editCell>
+					<a t:type="pagelink" t:page="course/instructorCourseEdit" t:context="course" href="#">${message:editcommand}</a>
+				</p:editCell>
+				<p:participantsCell>
+					<a t:type="pagelink" t:page="course/courseParticipantList" t:context="course" href="#">${message:participants}</a>
+				</p:participantsCell>				
+			</table><br />
+			<input type="submit" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<form t:type="form">
+		<table t:type="grid" t:source="users" t:row="user" t:add="role,edit,delete" exclude="rolename,registered,password" 
+			t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+			<p:roleCell>
+				<t:loop source="user.roles" value="role">
+					${rolename}
+					<br />
+				</t:loop>
+			</p:roleCell>
+			<p:editCell>
+				<a t:type="pagelink" t:page="user/edit" t:context="user" href="#">${message:editcommand}</a>
+			</p:editCell>
+			<p:deleteCell>
+				<a t:type="actionlink" t:id="delete" t:page="user/edit" t:context="user" href="#">${message:deletecommand}</a>
+			</p:deleteCell>
+		</table><br />
+	</form><br/>	
+
+	<p>
+	    [<t:pagelink page="user/edit">${message:createnewuser}</t:pagelink>]
+	</p>
+
+</html>

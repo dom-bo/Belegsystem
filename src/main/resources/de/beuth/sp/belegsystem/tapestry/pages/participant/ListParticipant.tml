@@ -1,0 +1,28 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<form t:type="form">
+		<table t:type="grid" t:source="participants" t:row="participant" t:add="username,firstname,lastname,email,phone,edit,delete" exclude="rolename,registered" 
+			t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+			<p:usernameCell>${participant.user.username}</p:usernameCell>
+			<p:firstnameCell>${participant.user.firstname}</p:firstnameCell>
+			<p:lastnameCell>${participant.user.lastname}</p:lastnameCell>
+			<p:emailCell>${participant.user.email}</p:emailCell>
+			<p:phoneCell>${participant.user.phone}</p:phoneCell>
+			<p:editCell>
+				<a t:type="pagelink" t:page="participant/edit" t:context="participant" href="#">${message:editcommand}</a>
+			</p:editCell>
+			<p:deleteCell>
+				<a t:type="actionlink" t:id="delete" t:page="participant/edit" t:context="participant" href="#">${message:deletecommand}</a>
+			</p:deleteCell>
+		</table><br />
+	</form><br/>	
+
+
+	<p>
+	    [<t:pagelink page="participant/edit">${message:createnewparticipant}</t:pagelink>]
+	</p>
+
+</html>

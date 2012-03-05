@@ -1,0 +1,33 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<form t:type="form">
+		<table t:type="grid" t:source="instructors" t:row="instructor" t:add="username,firstname,lastname,email,phone,instructorPrograms,edit,delete" exclude="registered,rolename" 
+			t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+			<p:usernameCell>${instructor.user.username}</p:usernameCell>
+			<p:firstnameCell>${instructor.user.firstname}</p:firstnameCell>
+			<p:lastnameCell>${instructor.user.lastname}</p:lastnameCell>
+			<p:emailCell>${instructor.user.email}</p:emailCell>
+			<p:phoneCell>${instructor.user.phone}</p:phoneCell>
+			<p:instructorProgramsCell>
+				<t:loop source="instructor.programs" value="program">
+					${program.description}<br/>
+				</t:loop>
+			</p:instructorProgramsCell>			
+			<p:editCell>
+				<a t:type="pagelink" t:page="instructor/edit" t:context="instructor" href="#">${message:editcommand}</a>
+			</p:editCell>
+			<p:deleteCell>
+				<a t:type="actionlink" t:id="delete" t:page="program/edit" t:context="instructor" href="#">${message:deletecommand}</a>
+			</p:deleteCell>
+		</table><br />
+	</form><br/>	
+
+	<p>
+	    [<t:pagelink page="instructor/edit">${message:createnewinstructor}</t:pagelink>]
+	    [<t:pagelink page="instructor/search">${message:searchinstructor}</t:pagelink>]
+	</p>
+
+</html>

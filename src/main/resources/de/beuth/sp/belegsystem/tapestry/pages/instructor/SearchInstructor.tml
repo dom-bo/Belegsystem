@@ -1,0 +1,32 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+                
+	<form t:type="form" t:id="form">
+		<t:label for="searchField"/>:
+		<input t:type="TextField" t:id="searchField" label="" value="searchValue" validate="required" size="30"/>
+		
+		<input type="submit" value="message:submit-search-label"/>
+	</form>
+	
+	<t:if test="instructors">
+		<br />
+		Suchergebnisse:
+		<br />
+		
+		<t:loop source="instructors" value="instructor">
+			<li>
+				${instructor.user.firstname} ${instructor.user.lastname} (<a href="mailto:${instructor.user.email}">${instructor.user.email}</a>)
+				[<t:pagelink page="instructor/edit" context="instructor">${message:edit-label}</t:pagelink>]
+				[<t:actionlink t:id="delete" context="instructor">${message:remove-label}</t:actionlink>]
+			</li>
+		</t:loop>	
+	</t:if>
+	        
+	<p>
+	    [<t:pagelink page="instructor/list">${message:showallinstructors}</t:pagelink>]
+	    [<t:pagelink page="instructor/edit">${message:createnewinstructor}</t:pagelink>]
+	</p>
+
+</html>

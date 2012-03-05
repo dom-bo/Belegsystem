@@ -1,0 +1,29 @@
+<html t:type="belegsystemlayout" 
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+      
+    <t:beaneditform t:id="instructorEditForm" object="instructor.user" submitlabel="${submitLabelOfForm}" add="passwordConfirmation, programs" reorder="username, password, passwordConfirmation">
+		<t:parameter name="password">
+			<t:label for="password" />
+			<t:passwordfield t:id="password" value="passwordValue" validate="minlength=5,maxlength=15" />
+		</t:parameter>
+		<t:parameter name="passwordConfirmation">
+			<t:label for="passwordConfirmation" />
+			<t:passwordfield t:id="passwordConfirmation" value="passwordConfirmationValue" validate="minlength=5,maxlength=15" />
+		</t:parameter>
+		<t:parameter name="programs">
+			<t:zone t:id="programsZone" id="programsZone">
+				<t:label for="selectAddProgram" />
+				<t:select t:id="selectAddProgram" t:model="allPrograms" t:value="program" t:blankOption="ALWAYS" t:zone="programsZone" />
+				<t:loop source="programsOfInstructor" value="program">
+					<label>Studiengang</label>
+					<div>
+						${program.description}
+						[<t:actionlink t:id="removeProgram" context="program" zone="programsZone">Studiengang entfernen</t:actionlink>]
+					</div>
+				</t:loop>
+			</t:zone>			
+		</t:parameter>				
+	</t:beaneditform>
+
+</html>

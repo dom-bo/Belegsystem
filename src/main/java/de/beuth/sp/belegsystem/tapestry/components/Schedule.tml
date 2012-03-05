@@ -1,0 +1,29 @@
+<t:container
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<table class="schedule">
+		<thead>
+			<tr>
+				<td></td>
+				<th>${message:MONDAY}</th>
+				<th>${message:TUESDAY}</th>
+				<th>${message:WEDNESDAY}</th>
+				<th>${message:THURSDAY}</th>
+				<th>${message:FRIDAY}</th>
+				<th>${message:SATURDAY}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<t:schedulerow hours="8" minutes="0" courses="userCourses" />
+			<t:schedulerow hours="10" minutes="0" courses="userCourses"  />
+			<t:schedulerow hours="12" minutes="15" courses="userCourses"  />
+			<t:schedulerow hours="14" minutes="15" courses="userCourses"  />
+			<t:schedulerow hours="16" minutes="0" courses="userCourses"  />
+			<t:schedulerow hours="17" minutes="45" courses="userCourses"  />
+			<t:schedulerow hours="19" minutes="30" courses="userCourses"  />
+			<t:schedulerow hours="21" minutes="0" courses="userCourses"  />
+		</tbody>
+	</table>
+</t:container>
+

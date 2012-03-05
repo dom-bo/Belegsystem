@@ -1,0 +1,14 @@
+#dozent table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+#dozent table thead th { text-align: center; background:#66d6d7; border:solid 1px grey; padding: 4px 5px; font-size: 14px; }
+#dozent table tbody td, table tbody th { padding: 4px 5px; border:solid 1px grey; font-size: 13px;  }
+#dozent table tbody td { text-align: center; }
+#dozent table tbody th { font-weight: normal; }
+#dozent table tbody th.time { background:#66d6d7; text-align: center; }
+#dozent table caption { text-align: left; font-weight: bold; font-size: 14px; padding:10px 0 8px 0; }
+#dozent table tbody td div.block{ padding: 4px 5px; background:#cceeef; overflow:hidden; }
+#dozent table tbody td div.block div.fach{ float:left; }
+#dozent table tbody td div.block div.raum{ float:right; }
+#dozent table.stundenplan tbody td { padding: 0; }
+#dozent table.stundenplan .pause30 { margin-bottom:8px; }
+#dozent table.stundenplan .pause45 { margin-bottom:12px; }
+#dozent table tbody td.ausgelastet { color:#ff0000; }

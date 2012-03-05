@@ -1,0 +1,121 @@
+<mockup version="1.0" skin="sketch" measuredW="989" measuredH="1008" mockupW="974" mockupH="994">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="15" y="14" w="974" h="994" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Belegsystem%0Ahttp%3A//belegsystem.beuth-hochschule.de/belegen</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TabBar" x="57" y="101" w="907" h="606" measuredW="256" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <selectedIndex>1</selectedIndex>
+        <tabHPosition>left</tabHPosition>
+        <text>Belegen%2C%20Dokumentation</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::SearchBox" x="721" y="184" w="171" h="-1" measuredW="143" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Suche%20nach%20Kursen</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Canvas" x="56" y="164" w="908" h="806" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::ButtonBar" x="76" y="135" w="-1" h="-1" measuredW="270" measuredH="31" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Semester-Vorlage%2C%20Eigene%20Auswahl</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::ComboBox" x="153" y="186" w="200" h="-1" measuredW="198" measuredH="25" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Medieninformatik%20Bachelor</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::ComboBox" x="422" y="184" w="-1" h="-1" measuredW="40" measuredH="25" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>4</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::ComboBox" x="497" y="184" w="-1" h="-1" measuredW="41" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>1</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="76" y="186" w="-1" h="-1" measuredW="78" measuredH="25" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Studienfach</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Label" x="358" y="185" w="64" h="25" measuredW="64" measuredH="25" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Semester</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::Label" x="468" y="186" w="31" h="25" measuredW="28" measuredH="25" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Zug</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Button" x="894" y="182" w="-1" h="-1" measuredW="61" measuredH="28" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Suche</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::DataGrid" x="70" y="223" w="883" h="347" measuredW="886" measuredH="356" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <size>12</size>
+        <text>Kurs%2CZug%2CGruppe%2CLehrkraft%2CTermin%2CRaum%2CAuslastung%2Cbelegt%2CAktion%0AHuman%20Computer%20Interaction%2CZug%201%2C1%2CSchmiedecke%5C%2C%20Ilse-Re%2CMi%2014%3A15%2CB323%2C100%25%2C%5Bx%5D%2C%5Bablegen%5D%0AHuman%20Computer%20Interaction%20%DCbg.%2CZug%201%2C1%2CSchmiedecke%5C%2C%20Ilse-Re%2CMi%2016%3A00%2CD%20114L%2C100%25%2C%5Bx%5D%2C%5Bablegen%5D%0AIT-Projektmanagement%2CZug%201%2C1%2CB%F6rner%5C%2C%20Thomas%2CDi%2014%3A15%3B%20Di%2016%3A00%2CB505%2C60%25%2C%5Bx%5D%2C%5Bablegen%5D%0AMedienprojekt%20I%2CZug%202%2C2%2CStrzebkowski%5C%2C%20Robert%2CMo%2014%3A15%3B%20Mo%2016%3A00%2CB223%2C100%25%2C%2C%5Bbelegen%5D%0AMultimedia-Engineering%20II%2CZug%202%2C2%2CStrzebkowski%5C%2C%20Robert%2CDo%2016%3A00%2CB545%2C100%25%2C%5Bx%5D%2C%5Bablegen%5D%0AMultimedia-Engineering%20II%20%DCbg.%2CZug%202%2C3%2CReiher%5C%2C%20Dirk%2CDo%2017%3A45%2CB223%2C100%25%2C%5Bx%5D%2C%5Bablegen%5D%0ASoftware-Engineering%20II%2CZug%202%2C2%2CZiemer%5C%2C%20Thomas%2CFr%2016%3A00%2CD%20136%2C75%25%2C%5Bx%5D%2C%5Bablegen%5D%0ASoftware-Engineering%20II%20%DCbg.%2CZug%202%2C3%2CZiemer%5C%2C%20Thomas%2CFr%2017%3A45%2CD%20E16a%20L%2C100%25%2C%5Bx%5D%2C%5Bablegen%5D%0ASoftwareprojekt%20I%2CZug%201%2C1%2CSteppat%5C%2C%20Michael%2CMi%2008%3A00%3B%20Mi%2010%3A45%2CD%20E17%20L%2C75%25%2C%5Bx%5D%2C%5Bablegen%5D%0AVerteilte%20Systeme%20II%2CZug%201%2C1%2CJunkes%5C%2C%20Heinz%2CMo%2010%3A00%2CD%20136%2C100%25%2C%2C%5Bbelegen%5D%0AVerteilte%20Systeme%20II%20%DCbg.%2CZug%201%2C1%2CJunkes%5C%2C%20Heinz%2CDo%2012%3A15%2CD%20E16a%20L%2C75%25%2C%2C%5Bbelegen%5D</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::ComboBox" x="609" y="185" w="97" h="-1" measuredW="57" measuredH="25" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>Alle</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::Label" x="544" y="185" w="71" h="25" measuredW="68" measuredH="25" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Lehrkraft</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::DataGrid" x="70" y="616" w="879" h="347" measuredW="416" measuredH="401" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <alternateRowColor>12303802</alternateRowColor>
+        <color>16777215</color>
+        <hLines>true</hLines>
+        <rowHeight>54</rowHeight>
+        <size>10</size>
+        <text>Zeiten%2CMontag%2CDienstag%2CMittwoch%2CDonnerstag%2CFreitag%0A08%3A00%20-%2009%3A30%2C%2C%2C%5BSP1%5CrSteppat%5CrD%20E17%20L%5D%0A10%3A00%20-%2011%3A30%2C%2C%2C%5BSP1%5CrSteppat%5CrD%20E17%20L%5D%0A12%3A15%20-%2013%3A45%2C%2C%2C%0A14%3A15%20-%2015%3A45%2C%2C%5BITPM%5CrB%F6rner%5CrB505%5D%2C%5BHCI%5CrSchmiedecke%5CrB323%5D%0A16%3A00%20-%2017%3A30%2C%2C%5BITPM%5CrB%F6rner%5CrB505%5D%2C%5BHCI%5CrSchmiedecke%5CrD%20114L%5D%2C%5BMME2%5CrStrebkowski%5CrB545%5D%2C%5BSE2%5CrZiemer%5CrD%20136%5D%0A17%3A45%20-%2019%3A15%2C%2C%2C%2C%5BMME2%5CrReiher%5CrB223%5D%2C%5BSE2%5CrZiemer%5CrD%20E16a%20L%5D%0A19%3A30%20-%2021%3A00%2C%0A%7B15%2C17%2C17%2C17%2C17%2C17%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::Label" x="749" y="102" w="-1" h="-1" measuredW="154" measuredH="25" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Angemeldet%3A%20StudentXY</text>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::Button" x="907" y="99" w="56" h="28" measuredW="60" measuredH="28" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>12</size>
+        <text>Logout</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::Label" x="73" y="589" w="-1" h="-1" measuredW="82" measuredH="25" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Stundenplan</text>
+      </controlProperties>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::Button" x="882" y="587" w="-1" h="-1" measuredW="67" measuredH="28" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>12</size>
+        <text>als%20PDF</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

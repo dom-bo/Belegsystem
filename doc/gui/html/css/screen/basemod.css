@@ -1,0 +1,62 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
+ * (en) stylesheet for screen layout
+ * (de) Stylesheet für das Bildschirm-Layout
+ *
+ * @creator       YAML Builder V1.2.1 (http://builder.yaml.de)
+ * @file          basemod.css
+ * @-yaml-minver  3.3
+ */
+
+@media screen, projection
+{
+  /** 
+   * (en) Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera 
+   * (de) Erzwingen vertikaler Scrollbalken in IE8, Firefox, Webkit & Opera 
+   *
+   * @workaround
+   * @affected IE8, FF, Webkit, Opera
+   * @css-for all
+   * @valid CSS3
+   */
+
+  body { overflow-y: scroll; }
+
+  /*-------------------------------------------------------------------------*/
+
+  /* (en) Marginal areas & page background */
+  /* (de) Randbereiche & Seitenhintergrund */
+  body { background: #FFF; padding: 10px 0; font-family: Arial; }
+  
+  /* Layout Properties | Layout-Eigenschaften */
+  .page_margins { width: auto;  max-width: 960px;  background: #fff; }
+  .page { padding: 10px; }
+  #header { position:relative; margin: 10px 0 0 0; padding: 95px 2em 1em 20px; color: #000; background:#00babd repeat-x bottom left; }
+  #topnav { position:absolute; top:10px; right:10px; text-align:right; color: #000; background: transparent; font-size: 11pt; }
+  #topnav a { color:#ff0000; text-decoration: none; }
+  #topnav a:VISITED { color:#ff0000; text-decoration: none; }
+  #topnav a:HOVER { color:#ff0000; text-decoration: none; }
+  #topnav a:LINK { color:#ff0000; text-decoration: none; }
+  #nav { overflow:hidden; margin:10px 0 0 0; font-size: 14px;}
+  div.hlist { background-color: #66d6d7; }
+  #main { margin: 10px 0; background: #fff; }
+  #footer { padding: 10px 20px; color:#666; background: #66d6d7; }
+	
+  button { background:#00babd; padding:3px 6px; margin:8px 0 0 0; font-size:12px; }
+  button.right { float:right; }
+  
+  /* (en) navigation: horizontal adjustment | (de) horizontale Ausrichtung  */
+  #nav ul { margin-left: 20px; }
+
+  /*-------------------------------------------------------------------------*/
+
+  /**
+   * (en) Formatting content container
+   * (de) Formatierung der Inhalts-Container
+   *
+   */
+
+  #main { padding: 0px 20px }
+	
+  /*-------------------------------------------------------------------------*/
+}

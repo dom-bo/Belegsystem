@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" t:type="belegsystemlayout" >
+	<body>
+		<t:zone t:id="participantListZone" id="participantListZone">
+			<t:grid source="course.participants" row="participant" exclude="roleName, registered" add="username, firstname, lastname, email, remove">
+				<p:usernameCell>
+					${participant.user.username}
+				</p:usernameCell>
+				<p:firstnameCell>
+					${participant.user.firstname}
+				</p:firstnameCell>
+				<p:lastnameCell>
+					${participant.user.lastname}
+				</p:lastnameCell>
+				<p:emailCell>
+					${participant.user.email}
+				</p:emailCell>
+				<p:removeCell>
+					<a t:type="actionlink" t:id="removeParticipant" t:context="participant" t:zone="participantListZone" href="#">${message:deletecommand}</a>
+				</p:removeCell>				
+			</t:grid>
+		</t:zone>		
+	</body>
+</html>

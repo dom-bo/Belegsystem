@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter"
+  t:type="belegsystemlayout" >
+<body>
+	<!-- Tabelle mit Kursteilnehmern wurde in CourseParticipantList ausgelagert.
+	<form t:type="form">
+		<table t:type="grid" t:source="participants" t:row="participant" t:add="username,firstname,lastname,email,phone" exclude="rolename,registered" 
+			t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+			<p:usernameCell>${participant.user.username}</p:usernameCell>
+			<p:firstnameCell>${participant.user.firstname}</p:firstnameCell>
+			<p:lastnameCell>${participant.user.lastname}</p:lastnameCell>
+			<p:emailCell>${participant.user.email}</p:emailCell>
+			<p:phoneCell>${participant.user.phone}</p:phoneCell>
+		</table><br />
+	</form><br/>
+	<h4>Kursbeschreibung &auml;ndern:</h4>
+	-->
+	<t:beaneditform t:id="descriptionForm" submitlabel="${message:submit-edit-label}" object="course"> 
+		
+		<t:parameter name="description">
+			<t:label for="description"/>
+			<t:textarea t:id="description" value="course.description" cols="50" rows="5"/>
+		</t:parameter>
+		<p:title>
+			<t:hidden value="course.title"/>
+		</p:title>
+		<p:courseIdentifier>
+			<t:hidden value="course.courseIdentifier"/>
+		</p:courseIdentifier>
+		<p:maxInstructors>
+			<t:hidden value="course.maxInstructors"/>
+		</p:maxInstructors>
+		<p:maxParticipants>
+			<t:hidden value="course.maxParticipants"/>
+		</p:maxParticipants>
+		<p:level>
+			<t:hidden value="course.level"/>
+		</p:level>
+		<p:studyGroup>
+			<t:hidden value="course.studyGroup"/>
+		</p:studyGroup>
+   	</t:beaneditform>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	 
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" 
+	t:type="belegsystemlayout" >
+<body>
+	<t:form t:id="deletables">
+		<table t:type="grid" t:source="terms" t:row="term" t:add="edit,delete" 
+			t:rowsPerPage="20" t:pagerPosition="top">[Grid here]
+			<p:editCell>
+				<a t:type="pagelink" t:page="term/edit" t:context="term" href="#">${message:editcommand}</a>
+			</p:editCell>
+			<p:deleteCell>
+					<input t:type="checkbox" t:id="delete" value="delete"/>
+					<!-- If optimistic locking is needed then uncomment this next line.
+					<t:hidden value="person.version"/>
+					 -->
+			</p:deleteCell>
+		</table><br />
+		<input type="submit" />
+	</t:form>
+	<br/>
+	<p>
+	    [<t:pagelink page="term/edit">${message:createnewterm}</t:pagelink>]
+	</p>
+</body>
+</html>

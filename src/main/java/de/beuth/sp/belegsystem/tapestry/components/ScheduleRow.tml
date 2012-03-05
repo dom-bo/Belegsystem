@@ -1,0 +1,34 @@
+<t:container
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	<tr>
+		<th>${formattedTime}</th>
+		<t:loop source="timeSlots" value="timeSlot">			
+			<t:if test="courseBooked">
+				<td class="schedulerow booked" id="${timeSlotId}">					
+					<div class="bottom">
+						${currentCourse.courseIdentifier} (${currentCourse.title})
+					</div>
+					<t:if test="participant">
+						<div class="left">
+							${currentInstructors}
+						</div>
+					</t:if>
+					<div class="right">${currentLesson.room}</div>
+					<t:if test="participant">
+						<div class="bottom">
+							<a t:type="eventlink" t:event="removeBooking" context="currentcourse"
+								href="#" t:zone="listZone">${message:debook-command}</a>
+						</div>
+					</t:if>					
+					</td>					
+			<p:else>				
+				<td class="schedulerow" id="${timeSlotId}">
+					<a class="emptyslot" t:type="eventlink" t:event="searchForTimeSlot" context="timeSlot" href="#" t:zone="listZone">						
+					</a>
+				</td>								
+			</p:else>
+			</t:if>
+		</t:loop>
+	</tr>
+</t:container>

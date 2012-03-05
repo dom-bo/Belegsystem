@@ -1,0 +1,24 @@
+<html t:type="belegsystemlayout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+   	<t:form t:id="loginForm" >   		
+    	<t:errors/>
+		<div style="display: table-row;">
+			<div style="display:table-cell;">
+				<t:label for="username"/>
+			</div>
+			<div style="display:table-cell;">
+				<t:textField t:id="username"/>
+			</div>
+		</div>
+		<div style="display: table-row;">
+			<div style="display:table-cell;">
+				<t:label for="password"/>
+			</div>
+			<div style="display:table-cell;">			
+				<t:passwordField t:id="password"/>
+			</div>
+		</div>
+		<t:submit value="${message:login}"/>
+    </t:form>
+</html>    

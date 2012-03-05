@@ -1,0 +1,8 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<br/>
+	<label for="startDateLesson">Startdatum</label>
+	<t:textfield t:id="startDateLesson" name="startDateLesson" value="startDate" onClick="scwShow(this,event,${language}${excludedWeekdays});"/>
+	<br/>
+	<label for="endDateLesson">Enddatum</label>
+	<t:textfield t:id="endDateLesson" name="endDateLesson" value="endDate" onClick="scwShow(this,event,${language}${excludedWeekdays});"/>		
+</t:container>

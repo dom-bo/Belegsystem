@@ -1,0 +1,7 @@
+﻿- Benutzeroberfläche - Mockups
+	- Welche / wieviele Seiten (Formulare und Anzeigeseiten!) 
+	- Mockups für diese
+
+- Mockups für mobile Variante
+
+- Nicht für Kann-Features nötig

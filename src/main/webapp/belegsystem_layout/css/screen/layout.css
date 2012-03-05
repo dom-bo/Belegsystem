@@ -1,0 +1,33 @@
+#main table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+#main table thead th { text-align: center; background:#66d6d7; border:solid 1px grey; padding: 4px 5px; font-size: 0.8em; }
+#main table tbody td { padding: 4px 5px; border:solid 1px grey; font-size: 0.8em; text-align: center; vertical-align: top; }
+#main table tbody th.time { background:#66d6d7; text-align: center; }
+#main table caption { text-align: left; font-weight: bold; font-size: 14px; padding:10px 0 8px 0; }
+#main table tbody td div.block{ padding: 4px 5px; background:#cceeef; overflow:hidden; }
+#main table tbody td div.block div.fach{ float:left; }
+#main table tbody td div.block div.raum{ float:right; }
+#main table tbody td.ausgelastet { color:#ff0000; }
+#main span { font-size: 0.8em; }
+#main table ul { list-style: none; margin: 0; }
+#main table ul li { text-align: left; }
+#main table .highlight_true { background: #cceeef; }
+#main table .highlight_false { background: #ffa0a0; }
+
+#main table.schedule .pause30 { margin-bottom:8px; }
+#main table.schedule .pause45 { margin-bottom:12px; }
+#main table.schedule .schedulerow div.left { float:left;}
+#main table.schedule .schedulerow div.right { float:right; }
+#main table.schedule .schedulerow div.bottom { clear:both; text-align:left; }
+#main table.schedule .schedulerow a.emptyslot { height: 100%; width: 100%; display: block; text-indent:-1000em; }
+#main table.schedule .schedulerow a.emptyslot a:active, a:focus {outline: none;}
+#main table.schedule .booked { background: #f0f0f0; }
+#main table.schedule tbody th { padding: 5px 2px; width: 10%; height: 52px; border: 1px solid black; text-align: center; }
+#main table.schedule tbody td { padding: 5px 2px; width: 15%; height: 52px; font-size: 0.7em; }
+#main table.schedule .highlight_true { background: #cceeef; }
+#main table.schedule .highlight_false { background: #ffa0a0; }
+
+#main table.profile tbody th { border: 1px solid black; text-align: center; font-size: 0.8em; background:#66d6d7; width: 30%;}
+#main table.profile tbody td { border: 1px solid black; text-align: left; font-size: 0.8em; width: 70%;}
+
+#main div.timeslotwarning { color: red; font-size: 0.8em; }
+

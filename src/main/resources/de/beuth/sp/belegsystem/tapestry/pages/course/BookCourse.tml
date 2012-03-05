@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">	 
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter" t:type="BelegsystemLayout" >
+<body>
+	<h3>${message:search-header}</h3>
+	<br />
+    <t:zone t:id="formZone" id="formZone" style="display: inline;">	
+		<t:form t:type="form" t:id="ajaxForm" t:zone="listZone">
+			<span>${message:program-label}:</span>
+			<t:select t:id="program" t:model="allPrograms" t:value="program" t:blankOption="ALWAYS" t:blankLabel="${message:all-programs-label}" t:zone="listZone" />
+			&nbsp;<span>${message:level-label}:</span>
+			<t:select t:id="level" t:model="levels" t:zone="listZone" />
+			&nbsp;<span>${message:studygroup-label}:</span>
+			<t:select t:id="studygroup" t:model="studygroups" t:value="studygroup" t:zone="listZone" />
+			&nbsp;<span>${message:Instructors}:</span>
+			<t:select t:id="instructor" t:model="allInstructors" t:value="instructor" t:blankOption="ALWAYS" t:blankLabel="${message:all-instructors-label}" t:zone="listZone" />
+			&nbsp;<span>${message:term-label}:</span>
+			<t:select t:id="term" t:model="allTerms" t:value="term" t:blankOption="ALWAYS" t:blankLabel="${message:all-terms-label}" t:zone="listZone" />
+			<br/><br/>		
+	        <span>${message:criteria-text}:</span>
+	        <input t:type="TextField" value="search" size="25" t:mixins="zoneUpdater" t:clientEvent="keyup" t:event="searchChanged" t:zone="listZone"/>
+	        &nbsp;
+	        <input type="submit" value="${message:search-submit}"/>
+	        <input t:type="submit" t:id="cancel" value="${message:search-cancel}" />
+	    </t:form>
+	    <br />
+	</t:zone>
+    <t:zone t:id="listZone" id="listZone" style="display: inline;">	
+    	<t:if test="timeSlot">
+    	<div class="timeslotwarning">
+    		${activeTimeSlotSelectionWarning}
+    		<a t:type="eventlink" t:event="resetTimeSlot" href="#" t:zone="listZone">${message:resettimeslot-command}</a>
+    	</div><br />
+    	</t:if>
+	    <table >
+			<thead>
+				<tr>
+					<th>${message:courseIdentifier-label}</th>
+					<th>${message:title-label}</th>
+					<th>${message:level-label}</th>
+					<th>${message:studygroup-label}</th>
+					<th>${message:Instructors}</th>
+					<th>${message:lessons-label}</th>
+					<th>${message:workload-label}</th>
+					<th>${message:action-label}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<t:loop source="searchCourses" value="course">
+				<tr id="course_${course.courseIdentifier}" 
+					onmouseover="javascript:highlightId(${timeSlotIdArray}, ${bookable}); highlightId(['course_${course.courseIdentifier}'], ${bookable});" 
+					onmouseout="javascript:unhighlightId(${timeSlotIdArray}); unhighlightId(['course_${course.courseIdentifier}']);">
+					
+					<td>${course.courseIdentifier}</td>	
+					<td>
+						<t:pagelink page="course/detailview" context="course">${course.title}</t:pagelink>
+					</td>
+					<td>${course.level}</td>
+					<td>${course.studyGroup}</td>
+					<td>
+						<ul>
+							<t:loop source="course.instructors" value="loopinstructor">
+								<li>
+									${loopinstructor}
+								</li>
+							</t:loop>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<t:loop source="course.lessons" value="lesson">
+								<li>${lessonTimeSlot}</li>
+							</t:loop>
+						</ul>
+					</td>
+					<td>${numbersOfWorkload}</td>
+					<td>
+						<t:if test="courseAlreadyBooked">
+							<a t:type="eventlink" t:event="removeBooking" context="course"
+								href="#" t:zone="listZone">${message:debook-command}</a>
+							<p:else>								
+							<a t:type="eventlink" t:event="booking" context="course"
+								href="#" t:zone="listZone">${message:book-command}</a>																	
+							</p:else>
+						</t:if>
+					</td>
+				</tr>
+				</t:loop>
+			</tbody>
+		</table>
+	</t:zone>
+	<br />
+	<br />
+	<h3>Stundenplan</h3>	
+	<br />	
+	<t:zone t:id="timetableZone" id="timetableZone" style="display: inline;">
+		<t:schedule user="loggedInUser"/>
+	</t:zone>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.popup {
+	position: absolute;
+	width: 500px;
+	
+	background: #ffffff;
+	top: 250px;
+	left: 220px;
+	border: 2px solid black;
+	font-size: 13px;
+}
+
+.popup .popup_table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.popup .popup_table .popup_header {
+	background: #66d6d7;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 5px;
+	border-bottom: 1px solid grey;
+}
+
+.popup .popup_table .popup_header table td.title {
+	width: 100%;
+}
+
+.popup .popup_table .popup_header table td.close {
+	
+}
+
+.popup .popup_table .popup_title {
+	padding: 5px;
+}
+
+.popup .popup_table .popup_title table td.course {
+	font-size: 24px;
+	width: 100%;
+}
+
+.popup .popup_table .popup_title table td.allocation {
+	font-size: 12px;
+}
+
+.popup .popup_table .popup_details {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+.popup .popup_table .popup_description {
+	padding: 5px;
+}
+
+.popup textarea {
+	border: none;
+	width: 100%;
+}
+
+.side_button {
+	width: 24px;
+	height: 24px;
+	margin-bottom: 3px;
+	cursor: pointer;
+	float:left;
+	
+}
+
+
+.save_button {
+	background-image: url(../../images/save.png);
+}
+
+.discard_button {
+	background-image: url(../../images/undo.png);
+}
+
+.edit_button {
+	background-image: url(../../images/edit.png);
+}
+
+.mail_button {
+	background-image: url(../../images/mail.gif);
+	margin: 3px;
+}
+
+.close_button {
+	background-image: url(../../images/close.png);
+	margin: 3px;
+}
+
+
+.popup .popup_table .popup_notes {
+	padding: 5px;
+}
+
+.popup .box_title {
+
+}
+
+.popup .description_content {
+	border: 1px solid grey;
+}
+
+.popup .notes_content {
+	border: 1px solid grey;
+	overflow: auto;
+	height: 200px;
+	padding: 5px;
+}
+
+.popup .notes_text {
+	border: 1px solid grey;
+	background: #cceeef;
+	padding: 10px;	
+}
+
+.usertable tbody td {
+	padding: 2px;
+}
+
+.usertable .user_name {
+	width: 100%;
+}
+
+.usertable .highlight {
+	background: #efefef;
+}

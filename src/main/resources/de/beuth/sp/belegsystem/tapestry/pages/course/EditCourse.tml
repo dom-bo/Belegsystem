@@ -1,0 +1,68 @@
+<html t:type="belegsystemlayout"  xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+    <t:zone t:id="courseFormZone" id="courseFormZone">
+	    <t:beaneditform t:id="courseForm" submitlabel="${submitLabelOfForm}" object="course" add="program,term,instructors,lessons" reorder="courseIdentifier,title,program" zone="courseFormZone">
+			<t:parameter name="program">
+				<t:label for="program" />
+				<t:select t:id="program" model="allPrograms" value="course.program" />
+			</t:parameter> 
+			<t:parameter name="description">
+				<t:label for="description"/>
+				<t:textarea t:id="description" value="course.description" cols="50" rows="5"/>
+			</t:parameter> 
+			<t:parameter name="term">
+				<t:label for="term" />
+				<t:select t:id="term" model="allTerms" value="course.term" t:blankOption="NEVER"/>
+			</t:parameter> 			   
+			<t:parameter name="instructors">	
+				<t:zone t:id="instructorsZone" id="instructorsZone">
+					<t:loop source="instructors" value="instructor" formstate="none">											
+						<div class="beaneditor-row">
+							<label>Dozent</label>
+							${instructor} (${instructor.user.email})
+		      				[<t:actionlink t:id="removeInstructor" context="instructor" zone="instructorsZone">löschen</t:actionlink>]
+						</div>
+					</t:loop>
+				</t:zone>
+				<t:label for="instructorName">Neuen Dozent suchen</t:label>
+				<input t:type="textField" t:id="instructorName" t:mixins="zoneUpdater" t:clientEvent="keyup" t:event="instructorNameChanged" t:zone="instructorsSearchZone"/>
+				<t:zone t:id="instructorsSearchZone" id="instructorsSearchZone">				
+					<t:loop source="possibleInstructorsToAdd" value="instructor" formstate="none">
+						<div class="beaneditor-row">
+							<label>Neuer Dozent</label>
+							${instructor} (${instructor.user.email}) 
+		      				[<t:actionlink t:id="addInstructor" context="instructor" zone="instructorsZone">hinzufügen</t:actionlink>]
+						</div>
+					</t:loop>										
+				</t:zone>												
+			</t:parameter>
+			
+			<t:parameter name="lessons">
+				<h2>Unterrichtseinheiten</h2>
+				<t:ajaxformloop source="lessons" value="lesson" encoder="lessonEncoder">
+					${updateLessonIndex()}
+					<h4>${lessonIndex}. Unterrichtseinheit</h4>				
+					<t:label for="roomLesson">Raum</t:label>
+					<t:textfield t:id="roomLesson" value="lesson.room" t:validate="required"/>					
+					<t:zone t:id="lessonDateZone" id="lessonDateZone${lessonIndex}">				
+						<t:hidden t:id="timeslotOnly" value="timeSlot" />
+						<t:label for="timeslotLesson">Zeitschlitz</t:label>
+						<t:select t:id="timeslotLesson" t:model="timeslotLessonModel" value="timeslotLesson" encoder="timeslotlessonEncoder" t:zone="lessonDateZone${lessonIndex}" 
+								  t:blankOption="ALWAYS" t:blankLabel="Zeitschlitz auswählen..." t:validate="required"/>
+						<br/>
+						<t:label for="repetitionLesson">Wiederholung in Wochen</t:label>
+						<t:select t:id="repetitionLesson" t:model="literal:0,1,2,3,4" value="lesson.repetitionInWeeks" t:blankOption="NEVER"/>								  
+						<br/>
+						<t:lessonCalendar t:id="lessonCalendar" lesson="lesson"/>
+						<br/>
+						</t:zone>									
+					<t:removerowlink>Unterrichtseinheit entfernen</t:removerowlink>						
+					<p:addRow>
+						<br/>
+						<t:addrowlink>Weitere Unterrichtseinheit hinzufügen</t:addrowlink>
+					</p:addRow>													
+				</t:ajaxformloop>
+			</t:parameter>
+	    </t:beaneditform>
+	</t:zone>
+	
+</html>

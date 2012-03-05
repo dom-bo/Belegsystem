@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<belegsystemSettings>
+	<courseBookingDays>28</courseBookingDays>
+	<durationInMinutes>90</durationInMinutes>
+	<createDefaultAdmin>true</createDefaultAdmin>
+	<defaultAdminName>admin</defaultAdminName>
+	<defaultAdminPassword>admin</defaultAdminPassword>
+	<defaultPageParticipant>course/book</defaultPageParticipant>
+	<defaultPageInstructor>course/instructorcourseview</defaultPageInstructor>
+	<defaultPageAdmin>course/list</defaultPageAdmin>
+</belegsystemSettings>
